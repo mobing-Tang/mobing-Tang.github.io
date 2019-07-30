@@ -8,13 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="����ʦ����ѧ16����javaѧϰ��Java����">
+<meta name="keywords" content="java,J2EE,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="����ʦ����ѧ16����javaѧϰ��Java����">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="����ʦ����ѧ16����javaѧϰ��Java����">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -43,10 +47,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Tang</a></h1>
 		</hgroup>
 		
 
@@ -65,8 +69,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -101,10 +103,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Tang</h1>
 			</hgroup>
 			
 			
@@ -155,10 +157,24 @@
     <article id="post-搭建hexo个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/29/搭建hexo个人博客/">搭建hexo个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/29/搭建hexo个人博客/" class="archive-article-date">
+  	<time datetime="2019-07-29T02:41:29.592Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h1 id="搭建hexo个人博客"><a href="#搭建hexo个人博客" class="headerlink" title="搭建hexo个人博客"></a>搭建hexo个人博客</h1><h2 id="安装node-js-和-Git"><a href="#安装node-js-和-Git" class="headerlink" title="安装node.js 和 Git"></a>安装node.js 和 Git</h2><ul>
+        <h2 id="安装node-js-和-Git"><a href="#安装node-js-和-Git" class="headerlink" title="安装node.js 和 Git"></a>安装node.js 和 Git</h2><ul>
 <li>下载node.js and git</li>
 <li>无脑next默认安装<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2></li>
 </ul>
@@ -168,40 +184,9 @@
 <li>node -v</li>
 <li>npm -v</li>
 </ul>
-<p>3.安装个cnpm提高速度，以后下载什么东西都使用cnpm</p>
-<ul>
-<li>$ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> 等待一分钟左右</li>
-<li>检查是否安装好cnpm：$cnpm<br><img src="https://upload-images.jianshu.io/upload_images/18958677-d14d663524d57c82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-</ul>
-<p>4.安装hexo  </p>
-<ul>
-<li>$ cnpm install -g hexo-cli</li>
-<li>验证是否安装成功：$ hexo -v</li>
-<li>成功：<img src="https://upload-images.jianshu.io/upload_images/18958677-e37448761e85a224.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
-<li>查看当前路径：$ pwd</li>
-<li>安装hexo：$ hexo init</li>
-<li>安装成功：<img src="https://upload-images.jianshu.io/upload_images/18958677-1174194ed6e5f0ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/18958677-9de6f388c5108cec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/760" alt="image.png"></li>
-<li>根据图中命令操作，安装npm依赖：npm install</li>
-<li>npm audit fix</li>
-<li>生成静态博客：hexo g</li>
-<li>测试是否成功：hexo s</li>
-</ul>
-<p>5.运行测试</p>
-<ul>
-<li>常用命令：hexo clean 清理缓存文件</li>
-<li>hexo g 生成文件</li>
-<li>hexo s 运行本地服务器</li>
-<li>hexo d 上传到服务器</li>
-</ul>
-<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul>
-<li>$ hexo new “My New Post”</li>
-<li>创建的文章在source的_post目录下面</li>
-<li>md文件可以使用typora来编写</li>
-<li>文件里面使用markdown格式来编写</li>
-<li>重新生成文件：hexo g</li>
-<li>启动服务器：hexo s</li>
-</ul>
-<h2 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h2>
+        
+          <a class="article-more-a" href="/2019/07/29/搭建hexo个人博客/#more">more >></a>
+        
       
 
       
@@ -270,13 +255,9 @@
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
+          <a class="article-more-a" href="/2019/07/29/hello-world/#more">more >></a>
+        
       
 
       
@@ -328,7 +309,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 Tang
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -369,8 +350,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -382,15 +361,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -409,6 +386,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">html5</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -453,38 +438,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
